@@ -19,6 +19,8 @@ public interface MyDao {
     @Query(  "select * from mysentences2 " + " ORDER BY RANDOM() LIMIT 1" )
     public List<mysentences2> myqueries();
 
+    @Query ("select * from mysentences2 where email   ORDER BY RANDOM() LIMIT 1" )
+    public List <mysentences2> myCharacter();
 
 
 

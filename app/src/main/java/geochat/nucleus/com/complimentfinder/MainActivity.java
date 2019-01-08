@@ -36,7 +36,7 @@ import java.util.jar.Attributes;
 // import static geochat.nucleus.com.complimentfinder.DataBaseHelper.TABLE_NAME2;
 
 
-public class MainActivity extends AppCompatActivity implements MyDao {
+public class MainActivity extends AppCompatActivity   {
 
  public static DataBaseHelper dataBaseHelper;
 
@@ -65,34 +65,57 @@ public class MainActivity extends AppCompatActivity implements MyDao {
         rbAppereance = (RadioButton) findViewById(R.id.radio3);
         radiogroup = (RadioGroup) findViewById(R.id.radiogroupp);
 
-        /*
+
+
+
+
+        /// ŞUAN PROGRAM ÇALIŞIR VAZİYETTE ŞİMDİ RADIOBUTONLARDAN SQL SORGUSU ÇALIŞTIRMAK GEREKİYOR.ÖNCE FONKSYINO YAZACAZ.
         radiogroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
             @Override
             public void onCheckedChanged(RadioGroup group, int selectedId) {
-                /*
-                /*
+
+
                 if (selectedId == R.id.radio1) {
-                    generatecompliment();
+                    RBgenerateCharacter();
 
 
                 }
 
                 if (selectedId == R.id.radio2) {
-                    //        shwtxt.setText("You chose ' option");
+                            shwtxt.setText("You chose ' option");
 
                 } else if (selectedId == R.id.radio2) {
 
-                    //         shwtxt.setText("You chose  option");
+                            shwtxt.setText("You chose  option");
 
                 } else {
 
-                    //       shwtxt.setText("You chose  option");
+                         //  shwtxt.setText("You chose  option");
                 }
 
             }
-            */
-        //  });
+
+            public void RBgenerateCharacter () {
+                List<mysentences2> mysentences2 = MainActivity.dataBaseHelper.myDao().myCharacter();
+
+                String info2 = "";
+
+
+                for (mysentences2 usr2: mysentences2) {
+
+                    String email = usr2.getEmail();
+
+
+                    info2 = info2 + " " + email  ;
+                }
+                shwtxt.setText(info2);
+                return;
+            }
+
+          });
+
+
 
         /// OPENS NEW ACTIVITY     ///////
         btnCompliments.setOnClickListener(new View.OnClickListener() {
@@ -107,21 +130,22 @@ public class MainActivity extends AppCompatActivity implements MyDao {
             @Override
             public void onClick(View view) {
 
-           //     List<mysentences2> mysentences2 = MainActivity.dataBaseHelper.myDao().getmysentences2();
+          //   List<mysentences2> mysentences2 = MainActivity.dataBaseHelper.myDao().getmysentences2();
 
-                List<mysentences2> mysentences2 = MainActivity.dataBaseHelper.myDao().myqueries();
+                List<mysentences2> mysentences2 = MainActivity.dataBaseHelper.myDao().myqueries(); // Burda DAO daki myqueries çağrılıyor sorgu yaptırılıyor
 
-                StringBuilder sb = new StringBuilder();
+         //       StringBuilder sb = new StringBuilder();
+
+String info = "";
 
 
             for (mysentences2 usr: mysentences2) {
-
-                int id = usr.getId();
+                //   int id = usr.getId();
                 String name= usr.getName();
-                String email = usr.getEmail();
+             //   String email = usr.getEmail();
 
 
-                info = mysentences2;
+           info = info + " " + name + " " + " "  ;
             }
             shwtxt.setText(info);
 return;
@@ -131,12 +155,12 @@ return;
 
 
         // mysentences  classından sonradan gelenler.Şu durumda işe yaramıyorlar.
-    @Override
+
     public void addmysentences2(mysentences2 mmysentences2) {
 
     }
 
-    @Override
+
     public List<mysentences2> getmysentences2() {
         return null;
     }
