@@ -19,7 +19,7 @@ public interface MyDao {
     @Query(  "select * from mysentences2 " + " ORDER BY RANDOM() LIMIT 1" )
     public List<mysentences2> myqueries();
 
-    @Query ("select * from mysentences2 where email   ORDER BY RANDOM() LIMIT 1" )
+    @Query ("select email,id,name  from mysentences2 " + "ORDER BY RANDOM() LIMIT 1" ) // taking id and name too but only puts email column to screen in Mainactivity
     public List <mysentences2> myCharacter();
 
 

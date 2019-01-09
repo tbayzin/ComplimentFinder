@@ -79,7 +79,6 @@ public class MainActivity extends AppCompatActivity   {
                 if (selectedId == R.id.radio1) {
                     RBgenerateCharacter();
 
-
                 }
 
                 if (selectedId == R.id.radio2) {
@@ -97,19 +96,20 @@ public class MainActivity extends AppCompatActivity   {
             }
 
             public void RBgenerateCharacter () {
-                List<mysentences2> mysentences2 = MainActivity.dataBaseHelper.myDao().myCharacter();
+
+                List <mysentences2> mysentences2 = MainActivity.dataBaseHelper.myDao().myCharacter();
 
                 String info2 = "";
 
 
-                for (mysentences2 usr2: mysentences2) {
+                for (mysentences2 usr: mysentences2) {
 
-                    String email = usr2.getEmail();
+                    String email = usr.getEmail();
 
 
-                    info2 = info2 + " " + email  ;
+                    info2 = info2 + email  ;
                 }
-                shwtxt.setText(info2);
+                shwtxt.setText(info2 + "fuc");
                 return;
             }
 
@@ -126,10 +126,11 @@ public class MainActivity extends AppCompatActivity   {
                                           });
 
 
+
+        // GENERATE METHOD ///
                 btnGenerate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
           //   List<mysentences2> mysentences2 = MainActivity.dataBaseHelper.myDao().getmysentences2();
 
                 List<mysentences2> mysentences2 = MainActivity.dataBaseHelper.myDao().myqueries(); // Burda DAO daki myqueries çağrılıyor sorgu yaptırılıyor
@@ -138,11 +139,10 @@ public class MainActivity extends AppCompatActivity   {
 
 String info = "";
 
-
             for (mysentences2 usr: mysentences2) {
-                //   int id = usr.getId();
+
                 String name= usr.getName();
-             //   String email = usr.getEmail();
+
 
 
            info = info + " " + name + " " + " "  ;
