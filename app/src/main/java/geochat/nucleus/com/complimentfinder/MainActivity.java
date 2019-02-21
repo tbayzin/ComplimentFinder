@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity   {
 
 
 
-        /// ŞUAN PROGRAM ÇALIŞIR VAZİYETTE ŞİMDİ RADIOBUTONLARDAN SQL SORGUSU ÇALIŞTIRMAK GEREKİYOR.ÖNCE FONKSYINO YAZACAZ.
+        /// 
         radiogroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
             @Override
