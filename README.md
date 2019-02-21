@@ -4,4 +4,4 @@ Are you out of compliments for your wife,gf or fiance. Here is your app Complime
 
  -In Progress-
 
-Partially migrated to Room. Left couple more tasks to finish.
+Partially implemented Room library. Left couple more tasks to finish.
