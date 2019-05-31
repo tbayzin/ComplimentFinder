@@ -45,10 +45,6 @@ public class MainActivity extends AppCompatActivity   {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
         final TextView shwtxt;
         final Button btnGenerate, btnCompliments;
         final RadioGroup radiogroup;
@@ -64,9 +60,6 @@ public class MainActivity extends AppCompatActivity   {
         rbRomantic = (RadioButton) findViewById(R.id.radio2);
         rbAppereance = (RadioButton) findViewById(R.id.radio3);
         radiogroup = (RadioGroup) findViewById(R.id.radiogroupp);
-
-
-
 
 
         /// 
@@ -92,7 +85,6 @@ public class MainActivity extends AppCompatActivity   {
 
                          //  shwtxt.setText("You chose  option");
                 }
-
             }
 
             public void RBgenerateCharacter () {
@@ -126,7 +118,6 @@ public class MainActivity extends AppCompatActivity   {
                                           });
 
 
-
         // GENERATE METHOD ///
                 btnGenerate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,7 +135,6 @@ String info = "";
                 String name= usr.getName();
 
 
-
            info = info + " " + name + " " + " "  ;
             }
             shwtxt.setText(info);
@@ -153,13 +143,11 @@ return;
         }); }
 
 
-
         // mysentences  classından sonradan gelenler.Şu durumda işe yaramıyorlar.
 
     public void addmysentences2(mysentences2 mmysentences2) {
 
     }
-
 
     public List<mysentences2> getmysentences2() {
         return null;
