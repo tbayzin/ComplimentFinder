@@ -21,10 +21,10 @@ public abstract class DataBaseHelper extends RoomDatabase {
 public abstract MyDao myDao();
 
 
-
-
-
 }
+
+// Codes down below wont be activated unless I rearrange the app
+//  Alttaki kodlar app in su durumunda gerekli değil.
 
     /*
     public static final String DB_NAME = "mydb";
@@ -44,8 +44,6 @@ public abstract MyDao myDao();
     public static final int DB_VERSION2 = 2;
 
 
-
-
     public DataBaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
@@ -53,12 +51,10 @@ public abstract MyDao myDao();
 
     public static int generatecompliments() {
 
-
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
 
 
         String sql = "CREATE TABLE " + TABLE_NAME + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_NAME + " VARCHAR)";
