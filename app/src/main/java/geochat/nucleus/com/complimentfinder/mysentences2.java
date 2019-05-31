@@ -17,8 +17,6 @@ public class mysentences2 {
     @ColumnInfo
     private String email;
 
-
-
     public int getId() {
         return id;
     }
